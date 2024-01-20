@@ -24,20 +24,22 @@ app.use(cors());
 
 app.get("/", async (req, res) => {
     res.send("Hello Financial");
-  });
+});
 
-  app.use("/", (err, req, res, next) => {
+app.use("/api/expenses", ExpenseRouter);
+app.use("/api/incomes", IncomeRouter);
+app.use("/api/savings", SavingsRouter);
+
+
+app.use("/", (err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: "Something went wrong." });
-  });
+});
   
-  app.use((req, res) => {
+app.use((req, res) => {
     res.status(404).json({ message: "Route not found" });
-  });
+});
 
-  app.use("/api/expenses", ExpenseRouter);
-  app.use("/api/incomes", IncomeRouter);
-  app.use("/api/savings", SavingsRouter);
 
 
 // /* MONGOOSE SETUP */
