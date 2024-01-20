@@ -26,7 +26,7 @@ export const addExpense = async (expenseDetails) => {
 
 export const allExpenses = async () =>{
     try{
-        const response = await axios .get(`${BASE_URL}/expenses`,{
+        const response = await axios.get(`${BASE_URL}/expenses`,{
             headers:{
                 "Content-Type":"application/json"
             }

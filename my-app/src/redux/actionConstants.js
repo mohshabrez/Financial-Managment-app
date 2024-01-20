@@ -1,4 +1,4 @@
-export const BASE_URL = "https://1121ae4e-b9cc-4851-9838-6883df0e053e-00-21gxoqb57isig.sisko.replit.dev/api";
+export const BASE_URL = "https://financial-managment-backend.onrender.com/api"
 
 // **Expense Actions
 
